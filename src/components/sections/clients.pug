@@ -1,0 +1,6 @@
+section.section
+  .container
+    h2.visually-hidden Clients we have worked with
+    .clients
+      each c, i in clients
+        span(class=`client client--${c.modifier}`) #{ c.name }

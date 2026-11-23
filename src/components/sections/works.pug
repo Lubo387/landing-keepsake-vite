@@ -1,0 +1,15 @@
+section#works.section
+  .container
+    h2.visually-hidden Our portfolio works
+    each cat, i in filterCategories
+      input.filter-radio(type='radio', name='filter', id=cat.id, value=cat.value, checked=cat.checked)
+    .works__head
+      h2.section__title Featured works
+      .chips
+        each cat, i in filterCategories
+          label.chip(for=cat.id) #{ cat.label }
+    .grid
+      each work, i in works
+        +work-card(work)
+    .more
+      +btn('More works', '#works', 'secondary')

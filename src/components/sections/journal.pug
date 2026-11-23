@@ -1,0 +1,24 @@
+section#journal.section.section--end
+  .container.stack
+    h2.section__title From the journal
+    p Notes on process, case studies and things that inspire us.
+    .journal
+      each post, i in posts
+        article.post
+          +picture({
+            name: post.image,
+            alt: post.title,
+            width: 150,
+            height: 150,
+            className: 'post__image',
+            lazy: true,
+            widths: [150, 300],
+            sizes: '(min-width: 768px) 150px, 96px',
+          })
+          .post__body
+            span.post__meta #{ post.date }
+            h3.post__title #{ post.title }
+            p.post__text #{ post.text }
+            a.post__link(href=post.href)
+              | Read more
+              +icon('arrow-right')

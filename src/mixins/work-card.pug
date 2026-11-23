@@ -1,0 +1,18 @@
+mixin work-card(work)
+  - const modifier = work.from === 'desktop' ? 'card card--from-desktop' : work.from === 'tablet' ? 'card card--from-tablet' : 'card';
+  article(class=modifier, data-category=work.category)
+    +picture({
+      name: work.image,
+      alt: work.alt,
+      width: 800,
+      height: 632,
+      className: 'card__img',
+      lazy: true,
+      sizes: '(min-width: 1280px) 357px, (min-width: 768px) 50vw, 100vw',
+    })
+    a.card__overlay(href='#works', aria-label=`${work.title} — view details`)
+      span.card__plus(aria-hidden='true')
+        +icon('plus')
+      h3.card__title #{ work.title }
+      span.card__line(aria-hidden='true')
+      span.card__category #{ work.categoryName }

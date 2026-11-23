@@ -1,0 +1,14 @@
+mixin btn(text, href, modifier)
+  - const btnClass = modifier ? `btn btn--${modifier}` : 'btn';
+  if href
+    a(class=btnClass, href=href)&attributes(attributes)
+      if block
+        block
+      else
+        | #{ text }
+  else
+    button(class=btnClass, type='button')&attributes(attributes)
+      if block
+        block
+      else
+        | #{ text }

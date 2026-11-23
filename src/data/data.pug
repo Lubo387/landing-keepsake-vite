@@ -1,5 +1,90 @@
-- const navLinks = [{href: '#favourite', text: 'Мої улюблені солодощі'}, {href: '#tip', text: 'Порада від Yummy'}]
+-
+  const navItems = [
+    { text: 'Home', href: '#top', active: true },
+    { text: 'About us', href: '#about', active: false },
+    { text: 'Our works', href: '#works', active: false },
+    { text: 'Journal', href: '#journal', active: false },
+    { text: 'Contact', href: '#contacts', active: false }
+  ]
 
-- const cards = [{image: 'card1.png', title: 'Червоний мак', description: 'Пралене з додаванням карамельної крихти, пасти ядер горіхів фундука та мигдалюпокрите шоколадною глазурʼю'}, {image: 'card2.png', title: 'Сливки-ленивки', description: 'Світлі вафельні листи, поєднані молочно-вершковою начинкою та покриті глазур’ю.'}, {image: 'card3.png', title: 'Ліщина', description: 'Праліне з додаванням подрібненої та тертої ліщини та мигдалю, покрите шоколадною глазур’ю.'}]
+  const filterCategories = [
+    { id: 'f-all', value: 'all', label: 'All', checked: true },
+    { id: 'f-branding', value: 'branding', label: 'Branding', checked: false },
+    { id: 'f-identity', value: 'identity', label: 'Identity', checked: false },
+    { id: 'f-print', value: 'print', label: 'Print design', checked: false },
+    { id: 'f-web', value: 'web', label: 'Web design', checked: false },
+    { id: 'f-motion', value: 'motion', label: 'Motion video', checked: false }
+  ]
 
-- const sweets = ['Чорний шоколад', 'Зефір', 'Пастила', 'Мармелад', 'Мед', 'Халва', 'Цукати']
+  const works = [
+    { title: 'Clothes Tag', category: 'branding', categoryName: 'Branding', image: 'work-01', alt: 'Clothes Tag project', from: 'all' },
+    { title: 'PiecePaper', category: 'identity', categoryName: 'Identity', image: 'work-02', alt: 'PiecePaper project', from: 'all' },
+    { title: 'Disk Cover', category: 'print', categoryName: 'Print design', image: 'work-03', alt: 'Disk Cover project', from: 'all' },
+    { title: 'Vol. 16', category: 'web', categoryName: 'Web design', image: 'work-04', alt: 'Vol. 16 project', from: 'all' },
+    { title: 'Profile UI', category: 'web', categoryName: 'Web design', image: 'work-05', alt: 'Profile UI project', from: 'tablet' },
+    { title: 'Brand Sheets', category: 'identity', categoryName: 'Identity', image: 'work-06', alt: 'Brand Sheets project', from: 'tablet' },
+    { title: 'Wall St.', category: 'branding', categoryName: 'Branding', image: 'work-07', alt: 'Wall St. project', from: 'desktop' },
+    { title: 'John Doe Studio', category: 'print', categoryName: 'Print design', image: 'work-08', alt: 'John Doe Design Studio project', from: 'desktop' },
+    { title: 'Seal Fabric', category: 'motion', categoryName: 'Motion video', image: 'work-09', alt: 'Seal Fabric project', from: 'desktop' }
+  ]
+
+  const services = [
+    { title: 'Web design', text: 'Crafting responsive, user-centered digital products that elevate your brand and convert.', icon: 'web' },
+    { title: 'Motion video', text: 'Dynamic motion graphics and video editing that tell your story with impact.', icon: 'motion' },
+    { title: 'Print design', text: 'High-end editorial layouts, bespoke packaging, and premium print collateral.', icon: 'print' },
+    { title: 'Illustration', text: 'Unique digital artworks, bespoke icons, and distinctive visual assets.', icon: 'illustration' }
+  ]
+
+  const stats = [
+    { number: '48', label: 'Projects completed' },
+    { number: '12', label: 'Design awards' },
+    { number: '90', label: 'Happy clients' },
+    { number: '6', label: 'Years in business' }
+  ]
+
+  const clients = [
+    { name: 'Nordly', modifier: 'nordly' },
+    { name: 'Halcyon', modifier: 'halcyon' },
+    { name: 'ARCO', modifier: 'arco' },
+    { name: 'PINEWOOD', modifier: 'pinewood' },
+    { name: 'Vela', modifier: 'vela' },
+    { name: 'Ostra', modifier: 'ostra' }
+  ]
+
+  const posts = [
+    { title: 'The art of minimal typography', date: '14 Oct 2026', image: 'post-01', text: 'How whitespace, contrast, and subtle hierarchy can turn simple text into an emotional experience.', href: '#journal' },
+    { title: 'Designing for accessibility', date: '02 Oct 2026', image: 'post-02', text: 'Accessible design is not a constraint — it is a commitment to creating better products for everyone.', href: '#journal' },
+    { title: 'Motion in digital branding', date: '21 Sep 2026', image: 'post-03', text: 'Why static guidelines are no longer enough in a digital-first ecosystem of interactive products.', href: '#journal' },
+    { title: 'Behind the scenes at Keepsake', date: '08 Sep 2026', image: 'post-04', text: 'A look into our creative routines, project kickoff rituals, and design critique culture.', href: '#journal' }
+  ]
+
+  const footerCols = [
+    {
+      title: 'Studio',
+      links: [
+        { text: 'About us', href: '#about' },
+        { text: 'Our works', href: '#works' },
+        { text: 'Journal', href: '#journal' },
+        { text: 'Careers', href: '#top' },
+        { text: 'Contact', href: '#contacts' }
+      ]
+    },
+    {
+      title: 'Services',
+      links: [
+        { text: 'Web design', href: '#about' },
+        { text: 'Motion video', href: '#about' },
+        { text: 'Print design', href: '#about' },
+        { text: 'Illustration', href: '#about' },
+        { text: 'Brand strategy', href: '#about' }
+      ]
+    }
+  ]
+
+  const socials = [
+    { name: 'rss', label: 'RSS', text: 'rss', href: '#' },
+    { name: 'fb', label: 'Facebook', text: 'f', href: '#' },
+    { name: 'tw', label: 'Twitter', text: 'tw', href: '#' },
+    { name: 'dr', label: 'Dribbble', text: 'dr', href: '#' },
+    { name: 'pin', label: 'Pinterest', text: 'p', href: '#' }
+  ]

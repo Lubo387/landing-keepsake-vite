@@ -1,5 +1,43 @@
-footer.footer
-    .footer-outer
-        .footer-inner
-            include logo
-            h4 Приєднуйся і живи зі мною у світі солодощів!
+footer#contacts.footer
+  .container.footer__inner
+    h2.visually-hidden Contacts and newsletter
+    .footer__top
+      .footer__links
+        each col in footerCols
+          .footer__col
+            h3.footer__title #{ col.title }
+            ul
+              each link in col.links
+                li
+                  a.footer__link(href=link.href) #{ link.text }
+      .subscribe
+        #success.form__success
+          h3.footer__title Newsletter
+          .success__box
+            +icon('check')
+            p You're in! Check your inbox to confirm.
+          p.form__note One email a month. No spam, unsubscribe anytime.
+        form.form(action='#success', method='get')
+          h3.footer__title Newsletter
+          p.form__text Fresh case studies and design notes, once a month.
+          .form__row
+            label.visually-hidden(for='email') Your email address
+            input#email.form__input(
+              type='email',
+              name='email',
+              placeholder='Your email address',
+              required,
+              aria-describedby='email-error'
+            )
+            button.btn.btn--primary(type='submit') Subscribe
+          p#email-error.form__error Please enter a valid email address.
+          label.form__consent
+            input.form__check(type='checkbox', name='consent', required)
+            | I agree to the privacy policy
+    hr.footer__divider
+    .footer__bottom
+      ul.socials
+        each s in socials
+          li
+            a(class=`social social--${s.name}`, href=s.href, aria-label=s.label) #{ s.text }
+      p.footer__copy © 2026 Keepsake. All rights reserved.

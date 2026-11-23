@@ -1,4 +1,43 @@
 header.header
-    .header-inner
-        include logo
-        include navigation
+  .container.header__bar
+    a.logo(href='#top', aria-label='Keepsake — back to top')
+      span.logo__letter K
+      | eepsake
+    input#menu-toggle.menu-toggle(
+      type='checkbox',
+      aria-label='Open or close the menu',
+      aria-controls='menu'
+    )
+    label.burger(for='menu-toggle', aria-hidden='true')
+      span.burger__line
+      span.burger__line
+      span.burger__line
+    #menu.menu
+      nav(aria-label='Main menu')
+        ul.nav
+          each item, i in navItems
+            li
+              a(
+                class={ nav__link: true, 'nav__link--active': item.active },
+                href=item.href,
+                aria-current=item.active ? 'page' : null
+              )
+                | #{ item.text }
+                +icon('chevron')
+      .menu__actions
+        +btn('Contact us', '#contacts', 'primary')
+          +icon('mail')
+          | Contact us
+        +btn('Favourites', '#works', 'secondary')
+          +icon('heart')
+          | Favourites
+      .menu__contacts
+        p.menu__label Say hello
+        a.menu__link(href='mailto:hello@keepsake.studio') hello@keepsake.studio
+        a.menu__link(href='tel:+442079460000') +44 20 7946 0000
+        ul.socials.socials--menu
+          each s in socials
+            li
+              a(class=`social social--${s.name}`, href=s.href, aria-label=s.label) #{ s.text }
+    a.fav(href='#works', aria-label='Favourites')
+      +icon('heart')

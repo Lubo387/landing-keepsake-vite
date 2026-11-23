@@ -1,0 +1,10 @@
+section#about.section
+  .container.stack
+    h2.section__title Our services
+    .services
+      each s, i in services
+        article.service
+          .service__icon
+            +icon(s.icon)
+          h3.service__title #{ s.title }
+          p.service__text #{ s.text }

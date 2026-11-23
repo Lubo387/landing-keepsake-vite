@@ -1,0 +1,8 @@
+section.section
+  .container
+    h2.visually-hidden Key figures
+    .stats
+      each s, i in stats
+        .stat
+          span.stat__number #{ s.number }
+          span.stat__label #{ s.label }
