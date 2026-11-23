@@ -1,0 +1,89 @@
+@use '../abstracts' as *;
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: rem(14);
+  padding: rem(28) rem(24);
+  background: var(--color-bg-light);
+
+  @include mq(md) {
+    padding: rem(40) rem(48);
+  }
+
+  &__mark {
+    font-family: var(--font-serif);
+    font-size: rem(72);
+    line-height: rem(44);
+    color: var(--color-accent);
+  }
+
+  &__text {
+    font-size: var(--fs-quote);
+    font-weight: 300;
+    line-height: var(--lh-quote);
+    color: var(--color-text-dark);
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__person {
+    display: flex;
+    align-items: center;
+    gap: rem(14);
+  }
+
+  &__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(48);
+    height: rem(48);
+    border-radius: 50%;
+    background: var(--color-teal);
+    font-family: var(--font-heading);
+    font-size: rem(17);
+    line-height: normal;
+    color: var(--color-white);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: rem(2);
+    line-height: normal;
+  }
+
+  &__name {
+    font-family: var(--font-heading);
+    font-size: rem(14);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-text-dark);
+  }
+
+  &__role {
+    font-size: rem(13);
+    color: var(--color-muted);
+  }
+}
+
+.dots {
+  display: flex;
+  gap: rem(8);
+}
+
+.dot {
+  width: rem(8);
+  height: rem(4);
+  background: var(--color-dot);
+
+  &--active {
+    width: rem(24);
+    background: var(--color-accent);
+  }
+}

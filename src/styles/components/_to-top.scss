@@ -1,0 +1,22 @@
+@use '../abstracts' as *;
+
+.to-top {
+  position: fixed;
+  right: rem(20);
+  bottom: rem(20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(44);
+  height: rem(44);
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-white);
+  box-shadow: 0 rem(6) rem(12) rgb(249 88 88 / 30%);
+  z-index: 40;
+  transition: background 0.2s;
+
+  &:hover {
+    background: var(--color-accent-hover);
+  }
+}

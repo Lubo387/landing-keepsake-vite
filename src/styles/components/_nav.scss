@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+
+.nav {
+  padding: rem(12) var(--side) 0;
+
+  @include mq(md) {
+    display: flex;
+    gap: var(--nav-gap);
+    padding: 0;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(16) 0;
+    border-bottom: rem(1) solid var(--color-line);
+    font-family: var(--font-heading);
+    font-size: rem(24);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-text-dark);
+    transition: color 0.2s;
+
+    &:hover,
+    &[aria-current='page'] {
+      color: var(--color-accent);
+    }
+
+    @include mq(md) {
+      padding: 0;
+      border-bottom: none;
+      font-size: rem(13);
+      font-weight: 400;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  &__chev {
+    flex-shrink: 0;
+
+    @include mq(md) {
+      display: none;
+    }
+  }
+}

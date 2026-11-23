@@ -1,0 +1,155 @@
+@use '../abstracts' as *;
+
+.subscribe {
+  order: -1;
+  width: 100%;
+
+  @include mq(md) {
+    order: 0;
+    flex: 0 0 rem(330);
+    width: auto;
+  }
+
+  @include mq(lg) {
+    flex-basis: rem(420);
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: rem(14);
+
+  .btn {
+    height: rem(44);
+  }
+
+  .footer__title {
+    margin-bottom: 0;
+  }
+
+  &__text {
+    line-height: rem(20);
+    color: var(--color-footer-text);
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+
+    @include mq(md) {
+      flex-direction: row;
+      gap: 0;
+    }
+  }
+
+  &__input {
+    flex: 1;
+    min-width: 0;
+    height: rem(44);
+    padding: 0 rem(14);
+    border: rem(1) solid var(--color-footer-input-border);
+    background: var(--color-footer-input);
+    color: var(--color-white);
+
+    &::placeholder {
+      color: var(--color-footer-text);
+    }
+
+    &:focus {
+      border-color: var(--color-teal);
+      outline: none;
+    }
+
+    &:user-invalid {
+      border-color: var(--color-accent);
+    }
+  }
+
+  &__error {
+    display: none;
+    font-size: rem(12);
+    line-height: normal;
+    color: var(--color-accent);
+  }
+
+  &:has(&__input:user-invalid) &__error {
+    display: block;
+  }
+
+  &__consent {
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+    font-size: rem(12);
+    line-height: normal;
+    color: var(--color-footer-muted);
+  }
+
+  &__check {
+    appearance: none;
+    flex-shrink: 0;
+    width: rem(14);
+    height: rem(14);
+    border: rem(1) solid var(--color-footer-check);
+    background: transparent;
+    cursor: pointer;
+
+    &:checked {
+      border-color: var(--color-teal);
+      background: var(--color-teal);
+    }
+
+    &:focus-visible {
+      @include focus-ring;
+    }
+  }
+
+  &__success {
+    display: none;
+
+    &:target {
+      display: flex;
+      flex-direction: column;
+      gap: rem(14);
+    }
+
+    &:target + .form {
+      display: none;
+    }
+
+    .footer__title {
+      margin-bottom: 0;
+    }
+  }
+
+  &__note {
+    font-size: rem(12);
+    line-height: normal;
+    color: var(--color-footer-muted);
+  }
+}
+
+.success {
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+    min-height: rem(96);
+    padding: 0 rem(14);
+    border: rem(1) solid var(--color-teal);
+    background: var(--color-teal-soft);
+    color: var(--color-white);
+    line-height: normal;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    fill: var(--color-teal);
+  }
+
+  &__check {
+    stroke: var(--color-white);
+  }
+}

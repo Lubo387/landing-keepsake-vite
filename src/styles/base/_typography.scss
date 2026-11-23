@@ -1,16 +1,100 @@
-*, html, body {
-  font-family: "Montserrat", sans-serif;
+@use '../abstracts' as *;
+
+:root {
+  @each $name, $value in $colors {
+    --color-#{$name}: #{$value};
+  }
+
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --font-logo: 'Dancing Script', cursive;
+  --font-serif: 'Lora', serif;
+  --container-max: 1100px;
+  --side: 20px;
+  --section-gap: 56px;
+  --header-height: 64px;
+  --hero-pad: 40px;
+  --gap-grid: 12px;
+  --nav-gap: 24px;
+  --card-ratio: 1 / 0.72;
+  --fs-logo: 22.1px;
+  --logo-circle: 34px;
+  --fs-hero: 26px;
+  --lh-hero: 33px;
+  --fs-cta: 22px;
+  --lh-cta: 30px;
+  --fs-quote: 16px;
+  --lh-quote: 26px;
+  --fs-stat: 38px;
+  --fs-service-text: 13px;
+  --fs-post-title: 15px;
+  --lh-post-title: 21px;
+  --service-icon: 72px;
+  --service-cols: 2;
+  --client-cols: 2;
+  --preview: 96px;
+  --post-gap: 16px;
+  --social-gap: 10px;
+  --footer-top: 48px;
+  --footer-bottom: 28px;
+  --footer-cols-gap: 20px;
+
+  @include mq(md) {
+    --side: 40px;
+    --section-gap: 72px;
+    --header-height: 84px;
+    --hero-pad: 52px;
+    --nav-gap: 24px;
+    --card-ratio: 1 / 0.79;
+    --fs-logo: 26px;
+    --logo-circle: 40px;
+    --fs-hero: 32px;
+    --lh-hero: 40px;
+    --fs-cta: 24px;
+    --lh-cta: 32px;
+    --fs-quote: 19px;
+    --lh-quote: 30px;
+    --fs-stat: 40px;
+    --fs-service-text: 14px;
+    --fs-post-title: 17px;
+    --lh-post-title: 23px;
+    --service-icon: 96px;
+    --client-cols: 3;
+    --preview: 150px;
+    --post-gap: 20px;
+    --social-gap: 8px;
+    --footer-top: 64px;
+    --footer-bottom: 32px;
+    --footer-cols-gap: 32px;
+  }
+
+  @include mq(lg) {
+    --side: 90px;
+    --section-gap: 90px;
+    --header-height: 100px;
+    --hero-pad: 64px;
+    --gap-grid: 14px;
+    --nav-gap: 40px;
+    --fs-hero: 40px;
+    --lh-hero: 50px;
+    --fs-cta: 28px;
+    --lh-cta: 36px;
+    --fs-quote: 22px;
+    --lh-quote: 35px;
+    --fs-stat: 48px;
+    --service-cols: 4;
+    --client-cols: 6;
+    --social-gap: 10px;
+    --footer-cols-gap: 60px;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-a {
-  cursor: pointer;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+body {
+  padding-top: var(--header-height);
+  font-family: var(--font-body);
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: rem(22);
+  color: var(--color-text);
+  background: var(--color-white);
 }

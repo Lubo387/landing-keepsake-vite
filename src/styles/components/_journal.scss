@@ -1,0 +1,75 @@
+@use '../abstracts' as *;
+
+.journal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(40);
+}
+
+.post {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--post-gap);
+
+  @include mq(lg) {
+    flex: 0 0 calc((100% - rem(40)) / 2);
+  }
+
+  &__image {
+    flex-shrink: 0;
+    width: var(--preview);
+    height: var(--preview);
+    object-fit: cover;
+    background: var(--color-bg-light);
+  }
+
+  &__body {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(8);
+  }
+
+  &__meta {
+    font-family: var(--font-heading);
+    font-size: rem(12);
+    line-height: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-meta);
+  }
+
+  &__title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-post-title);
+    font-weight: 400;
+    line-height: var(--lh-post-title);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-text-dark);
+  }
+
+  &__text {
+    font-size: rem(13);
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: rem(6);
+    font-family: var(--font-heading);
+    font-size: rem(12);
+    line-height: normal;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-accent);
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--color-accent-hover);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: rem(5);
+  width: rem(40);
+  height: rem(40);
+  cursor: pointer;
+
+  &__line {
+    width: rem(22);
+    height: rem(2);
+    background: var(--color-text-dark);
+    transition:
+      transform 0.2s,
+      opacity 0.2s;
+  }
+
+  @include mq(md) {
+    display: none;
+  }
+}

@@ -1,0 +1,64 @@
+@use '../abstracts' as *;
+
+.filter-radio {
+  @include visually-hidden;
+}
+
+.works {
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: rem(18);
+    padding-bottom: rem(22);
+
+    @include mq(md) {
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: rem(16) 0;
+      padding-bottom: rem(24);
+    }
+  }
+}
+
+.filter-radio[value='all']:checked ~ .works__head label[for='f-all'],
+.filter-radio[value='branding']:checked ~ .works__head label[for='f-branding'],
+.filter-radio[value='identity']:checked ~ .works__head label[for='f-identity'],
+.filter-radio[value='print']:checked ~ .works__head label[for='f-print'],
+.filter-radio[value='web']:checked ~ .works__head label[for='f-web'],
+.filter-radio[value='motion']:checked ~ .works__head label[for='f-motion'] {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.filter-radio[value='all']:focus-visible ~ .works__head label[for='f-all'],
+.filter-radio[value='branding']:focus-visible ~ .works__head label[for='f-branding'],
+.filter-radio[value='identity']:focus-visible ~ .works__head label[for='f-identity'],
+.filter-radio[value='print']:focus-visible ~ .works__head label[for='f-print'],
+.filter-radio[value='web']:focus-visible ~ .works__head label[for='f-web'],
+.filter-radio[value='motion']:focus-visible ~ .works__head label[for='f-motion'] {
+  @include focus-ring;
+}
+
+.filter-radio[value='branding']:checked ~ .grid .card:not([data-category='branding']),
+.filter-radio[value='identity']:checked ~ .grid .card:not([data-category='identity']),
+.filter-radio[value='print']:checked ~ .grid .card:not([data-category='print']),
+.filter-radio[value='web']:checked ~ .grid .card:not([data-category='web']),
+.filter-radio[value='motion']:checked ~ .grid .card:not([data-category='motion']) {
+  display: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-grid);
+
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mq(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

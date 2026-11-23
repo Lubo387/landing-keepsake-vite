@@ -1,0 +1,46 @@
+$colors: (
+  'accent': #f95858,
+  'accent-hover': #e44646,
+  'teal': #2cd5c4,
+  'teal-soft': rgb(44 213 196 / 12%),
+  'text-dark': #3a3a3c,
+  'text': #666a6e,
+  'muted': #9aa0a6,
+  'bg-light': #f0f3f4,
+  'border': #e1e5e8,
+  'footer': #2a2a2d,
+  'overlay': rgb(30 32 36 / 82%),
+  'white': #fff,
+  'btn-border': #d5dadd,
+  'line': #eef1f2,
+  'stats-line': #e6eaec,
+  'logo': #b9bec3,
+  'dot': #cfd5d9,
+  'meta': #b8bdc2,
+  'footer-link': #a9adb3,
+  'footer-text': #8e9297,
+  'footer-muted': #777b80,
+  'footer-input': #38383c,
+  'footer-input-border': #47474c,
+  'footer-check': #55555a,
+  'footer-line': #3b3b40,
+  'rss': #f7a64a,
+  'fb': #4d6db3,
+  'tw': #20b5e9,
+  'dr': #ee7cb0,
+  'pin': #e84849,
+  'art-ice': #c9dce8,
+  'art-slate': #5f6b78,
+  'art-green': #7bc67e,
+  'art-sky': #9ec5e0,
+  'art-yellow': #f4c542,
+  'art-gray': #7a8590,
+);
+$font-heading: ('Oswald', sans-serif);
+$font-body: ('Open Sans', sans-serif);
+$font-logo: ('Dancing Script', cursive);
+$font-serif: ('Lora', serif);
+$breakpoints: (
+  md: 768px,
+  lg: 1280px,
+);

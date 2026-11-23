@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.fav {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: rem(36);
+  height: rem(36);
+  margin-left: var(--nav-gap);
+  background: var(--color-accent);
+  color: var(--color-white);
+  transition: background 0.2s;
+
+  &:hover {
+    background: var(--color-accent-hover);
+  }
+
+  @include mq(md) {
+    display: flex;
+  }
+}

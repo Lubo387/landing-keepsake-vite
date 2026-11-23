@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+.container {
+  width: 100%;
+  max-width: calc(var(--container-max) + 2 * var(--side));
+  margin: 0 auto;
+  padding: 0 var(--side);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: rem(14);
+}

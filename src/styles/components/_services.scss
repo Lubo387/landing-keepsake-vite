@@ -1,0 +1,40 @@
+@use '../abstracts' as *;
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(40) rem(24);
+}
+
+.service {
+  flex: 0 0 calc((100% - (var(--service-cols) - 1) * rem(24)) / var(--service-cols));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(14);
+  text-align: center;
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--service-icon);
+    height: var(--service-icon);
+    border-radius: 50%;
+    background: var(--color-bg-light);
+  }
+
+  &__title {
+    font-family: var(--font-heading);
+    font-size: rem(15);
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-text-dark);
+  }
+
+  &__text {
+    font-size: var(--fs-service-text);
+  }
+}

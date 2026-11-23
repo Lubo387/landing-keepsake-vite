@@ -1,0 +1,48 @@
+@use '../abstracts' as *;
+
+.socials {
+  display: flex;
+  gap: var(--social-gap);
+
+  &--menu {
+    padding-top: rem(6);
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(34);
+  height: rem(34);
+  border-radius: 50%;
+  font-size: rem(12);
+  font-weight: 700;
+  line-height: normal;
+  color: var(--color-white);
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  &--rss {
+    background: var(--color-rss);
+  }
+
+  &--fb {
+    background: var(--color-fb);
+  }
+
+  &--tw {
+    background: var(--color-tw);
+  }
+
+  &--dr {
+    background: var(--color-dr);
+  }
+
+  &--pin {
+    background: var(--color-pin);
+  }
+}

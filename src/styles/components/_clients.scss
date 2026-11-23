@@ -1,0 +1,48 @@
+@use '../abstracts' as *;
+
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.client {
+  flex: 0 0 calc(100% / var(--client-cols));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: rem(72);
+  font-size: rem(22);
+  line-height: normal;
+  letter-spacing: 1px;
+  color: var(--color-logo);
+
+  &--nordly {
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+
+  &--halcyon {
+    font-family: var(--font-serif);
+    font-weight: 400;
+  }
+
+  &--arco {
+    font-family: var(--font-heading);
+    font-weight: 300;
+  }
+
+  &--pinewood {
+    font-family: var(--font-body);
+    font-weight: 700;
+  }
+
+  &--vela {
+    font-family: var(--font-serif);
+    font-weight: 700;
+  }
+
+  &--ostra {
+    font-family: var(--font-heading);
+    font-weight: 400;
+  }
+}

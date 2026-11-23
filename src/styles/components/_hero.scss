@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+
+.hero {
+  padding: var(--hero-pad) 0;
+  background: var(--color-bg-light);
+
+  &__title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-hero);
+    font-weight: 300;
+    line-height: var(--lh-hero);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-text-dark);
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    padding-top: rem(10);
+
+    @include mq(md) {
+      flex-direction: row;
+      gap: rem(12);
+    }
+  }
+}
