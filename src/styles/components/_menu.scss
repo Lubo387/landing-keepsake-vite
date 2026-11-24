@@ -18,10 +18,6 @@
   &:focus-visible + .burger {
     @include focus-ring;
   }
-
-  &:checked ~ .menu {
-    display: flex;
-  }
 }
 
 .menu {
@@ -89,4 +85,8 @@
     line-height: normal;
     color: var(--color-text-dark);
   }
+}
+
+.menu-toggle:checked ~ .menu {
+  display: flex;
 }
