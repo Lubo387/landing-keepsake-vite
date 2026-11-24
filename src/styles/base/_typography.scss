@@ -5,6 +5,12 @@
     --color-#{$name}: #{$value};
   }
 
+  --art-ice: var(--color-art-ice);
+  --art-slate: var(--color-art-slate);
+  --art-green: var(--color-art-green);
+  --art-sky: var(--color-art-sky);
+  --art-yellow: var(--color-art-yellow);
+  --art-gray: var(--color-art-gray);
   --font-heading: 'Oswald', sans-serif;
   --font-body: 'Open Sans', sans-serif;
   --font-logo: 'Dancing Script', cursive;

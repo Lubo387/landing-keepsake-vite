@@ -1,31 +1,31 @@
 .fill-ice {
-  fill: var(--art-ice);
+  fill: var(--color-art-ice, #c9dce8);
 }
 
 .fill-slate {
-  fill: var(--art-slate);
+  fill: var(--color-art-slate, #5f6b78);
 }
 
 .fill-green {
-  fill: var(--art-green);
+  fill: var(--color-art-green, #7bc67e);
 }
 
 .fill-sky {
-  fill: var(--art-sky);
+  fill: var(--color-art-sky, #9ec5e0);
 }
 
 .fill-yellow {
-  fill: var(--art-yellow);
+  fill: var(--color-art-yellow, #f4c542);
 }
 
 .fill-gray {
-  fill: var(--art-gray);
+  fill: var(--color-art-gray, #7a8590);
 }
 
 .fill-accent {
-  fill: var(--color-accent);
+  fill: var(--color-accent, #f95858);
 }
 
 .stroke-slate {
-  stroke: var(--art-slate);
+  stroke: var(--color-art-slate, #5f6b78);
 }
